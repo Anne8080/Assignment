@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetMusic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="shortcut icon" href="img/Nettrix-Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="laptop">
+        <div class="toppart">
+            <aside>
+                <div class="nettrix">
+                    <h3>NetMusic</h3>
+                    <img src="img/Nettrix-logo.png" alt="">
+                </div>
+                <input type="search" placeholder="Search NetMusic...">
+                <h2>COLLECTIONS</h2>
+                <div class="allcollections">
+                    <h2 id="create-collection" class="collection">Create Collection</h2>
+                    <div class="collection allsongs">
+                        <h2>All Music</h2>
+                    </div>
+                </div>
+
+                <footer>
+                    <h2 style="cursor: pointer;">SIGN IN</h2>
+                    <div class="love">
+                        <h3 style="font-size: 10px;">Made With Love <br><a href="">Akinlawon Anuoluwapo</a></h3>
+                        <div class="copyright" style="font-size: 10px;">
+                            <h5>@ &copy; Nettrix</h6>
+                            <a href="">Visit Nettrix</a>
+                            <a href="">Source</a>
+                        </div>
+                    </div>
+                </footer>
+            </aside>
+
+            <!-- <div class="collections"> -->
+                <div class="collectiondiv createcollectiondiv">
+                    <div class="create">
+                        <h2>Create A New Collection</h2>
+                        <input type="text" name="noc" placeholder="Name Of Collection">
+                        <button type="submit" id="createbutton">Create Collection</button>
+                    </div>
+                </div>
+    
+                <div class="music-list collectiondiv show">
+                    <div class="header">
+                        <div class="row">
+                            <i class="material-icons">queue_music</i>
+                            <span>Music list</span>
+                        </div>
+                        <i id="close" class="material-icons">close</i>
+                    </div>
+                    <ul>
+                        
+                    </ul>
+                </div>
+                
+                <!-- <div class="collectiondiv"></div> -->
+                <div class="playingsingle">
+                    <div class="playingsingleoverlay">
+                        <i id="back-from-single" class="material-icons" style="font-size: 38px;">arrow_circle_left</i>
+                    </div>
+                </div>
+            <!-- </div> -->
+            
+        </div>
+        <div class="wrapper">
+            <div class="top-bar">
+                <i class="material-icons">expand_more</i>
+                <span>Now Playing</span>
+                <i class="material-icons">more_horiz</i>
+                
+            </div>
+            <div class="csongl">
+                <div class="img-area">
+                    <img src="" alt="">
+                </div>
+                <div class="song-details">
+                    <p class="name"></p>
+                    <p class="artist"></p>
+                </div>
+            </div>
+            <div class="csongm">
+                <div class="progress-area">
+                    <input type="range" min="0" max="100" value="0" onchange="change_duration()" id="progress-bar">
+                    <div class="timer">
+                        <span class="current">0:00</span>
+                        <span class="duration"></span>
+                    </div>
+                    <audio id="main-audio" src=""></audio>
+                </div>
+                <div class="controls">
+                    <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                    <i id="prev" class="material-icons">skip_previous</i>
+                    <div class="play-pause">
+                        <i class="material-icons">play_arrow</i>
+                    </div>
+                    <i id="next" class="material-icons">skip_next</i>
+                    <i id="more-music" class="material-icons">queue_music</i>
+                    
+                </div>
+                
+            </div>
+            <div class="csongr">
+                <div class="volume">
+                    <div class="volumeflex">
+                        <i class="material-icons" id="volume_icon" onclick="check_mute()">volume_up</i>
+                        <p id="volume_show">90</p>
+                    </div>
+                    <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <div class="phone">
+        <div class="pwrapper">
+            <div class="ptop-bar">
+                <i class="material-icons">expand_more</i>
+                <span>Now Playing</span>
+                <i class="material-icons">more_horiz</i>
+                
+            </div>
+            <div class="pimg-area">
+                <img src="" alt="">
+            </div>
+            <div class="psong-details">
+                <p class="name"></p>
+                <p class="artist"></p>
+            </div>
+            <div class="pprogress-area">
+                <div class="pprogress-bar">
+                    <span></span>
+                </div>
+                <div class="ptimer">
+                    <span class="pcurrent">0:00</span>
+                    <span class="pduration"></span>
+                </div>
+                <audio id="pmain-audio" src=""></audio>
+            </div>
+            <div class="pcontrols">
+                <i id="prepeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                <i id="pprev" class="material-icons">skip_previous</i>
+                <div class="pplay-pause">
+                    <i class="material-icons">play_arrow</i>
+                </div>
+                <i id="pnext" class="material-icons">skip_next</i>
+                <i id="pmore-music" class="material-icons">queue_music</i>
+                
+            </div>
+            <div class="pmusic-list">
+                <div class="pheader">
+                    <div class="prow">
+                        <i class="material-icons">queue_music</i>
+                        <span>Music list</span>
+                    </div>
+                    <i id="close" class="material-icons">close</i>
+                </div>
+                <ul>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </div> -->
+
+    <script src="js/music-list.js"></script>
+    <script src="js/script.js"></script>
+    <!-- <script src="js/phone.js"></script> -->
+
+    
+</body>
+</html>
